@@ -22,3 +22,5 @@
         <a href="../../logout.php">Logout</a>
     </div>
 </aside>
+<div id="toast-root"></div>
+<script src="../../assets/js/gooey-toast.js"></script>

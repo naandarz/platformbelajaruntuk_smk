@@ -71,5 +71,7 @@ if (isset($_SESSION['user'])) {
         </div>
     </section>
 </div>
+<div id="toast-root"></div>
+<script src="assets/js/gooey-toast.js"></script>
 </body>
 </html>

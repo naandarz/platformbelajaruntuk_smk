@@ -15,11 +15,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['user'] = $user;
 
         if ($user['role'] === 'siswa') {
-            header("Location: pages/siswa/dashboard.php");
+            header("Location: pages/siswa/dashboard.php?login=1");
         } elseif ($user['role'] === 'guru') {
-            header("Location: pages/guru/dashboard.php");
+            header("Location: pages/guru/dashboard.php?login=1");
         } elseif ($user['role'] === 'admin') {
-            header("Location: pages/admin/dashboard.php");
+            header("Location: pages/admin/dashboard.php?login=1");
         }
         exit;
     } else {
@@ -71,5 +71,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </p>
     </div>
 </div>
+<div id="toast-root"></div>
+<script src="assets/js/gooey-toast.js"></script>
+<?php if ($error): ?>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        showGooeyToast({type:"error", title:"Login Gagal", message:"Email atau password salah."});
+    });
+</script>
+<?php endif; ?>
 </body>
 </html>

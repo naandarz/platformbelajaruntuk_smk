@@ -16,8 +16,9 @@ if (isset($_POST['update_profil'])) {
     $password_baru = $_POST['password_baru'];
 
     if ($password_baru != "") {
+        $password_plain = mysqli_real_escape_string($koneksi, $password_baru);
         $password = md5($password_baru);
-        mysqli_query($koneksi, "UPDATE users SET nama='$nama', kelas='$kelas', password='$password' WHERE id_user=$id_user");
+        mysqli_query($koneksi, "UPDATE users SET nama='$nama', kelas='$kelas', password='$password', password_plain='$password_plain' WHERE id_user=$id_user");
     } else {
         mysqli_query($koneksi, "UPDATE users SET nama='$nama', kelas='$kelas' WHERE id_user=$id_user");
     }

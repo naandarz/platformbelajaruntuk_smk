@@ -33,7 +33,7 @@ $latihan = mysqli_query($koneksi, "
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Riwayat Belajar</title>
+    <title>Semua Riwayat Belajar</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
@@ -43,11 +43,11 @@ $latihan = mysqli_query($koneksi, "
     <main class="main">
         <div class="topbar">
             <div>
-                <h1>Riwayat Belajar</h1>
-                <p>Ringkasan terbaru progress, nilai kuis, dan hasil latihan coding web yang sudah kamu kerjakan.</p>
+                <h1>Semua Riwayat Belajar</h1>
+                <p>Daftar lengkap progress, nilai kuis, dan latihan coding yang pernah kamu kerjakan.</p>
             </div>
             <div class="page-actions">
-                <a href="riwayat_semua.php" class="btn btn-primary">Lihat Semua Riwayat</a>
+                <a href="riwayat.php" class="btn btn-outline">Kembali Ringkasan</a>
             </div>
         </div>
 
@@ -92,8 +92,8 @@ $latihan = mysqli_query($koneksi, "
         </div>
 
         <div class="student-clean-card" style="margin-top:18px;">
-            <h3>Riwayat Latihan Coding Terbaru</h3>
-            <p>Kode terbaru yang kamu simpan melalui fitur Live Coding akan tampil di sini. Untuk melihat semua data, klik tombol Lihat Semua Riwayat.</p>
+            <h3>Semua Riwayat Latihan Coding</h3>
+            <p>Semua kode yang kamu simpan melalui fitur Live Coding akan tampil di sini.</p>
             <br>
 
             <div class="module-list">

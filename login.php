@@ -2,6 +2,7 @@
 session_start();
 include "config/koneksi.php";
 
+
 $error = "";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -34,6 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - HTML Learn RPL</title>
     <link rel="stylesheet" href="assets/css/style.css">
+<?php include "includes/ui_settings.php"; ?>
 </head>
 <body>
 <div class="auth-page">

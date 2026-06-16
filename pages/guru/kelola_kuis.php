@@ -31,6 +31,11 @@ if (isset($_GET['status'])) {
     if ($_GET['status'] == 'ditambah') $pesan = "Soal kuis berhasil ditambahkan.";
     if ($_GET['status'] == 'diupdate') $pesan = "Soal kuis berhasil diperbarui.";
     if ($_GET['status'] == 'dihapus') $pesan = "Soal kuis berhasil dihapus.";
+    if ($_GET['status'] == 'import') {
+        $jumlah = intval($_GET['jumlah'] ?? 0);
+        $skip = intval($_GET['skip'] ?? 0);
+        $pesan = "$jumlah soal berhasil diimport dari Word. $skip soal dilewati karena format belum valid.";
+    }
 }
 
 $materi = mysqli_query($koneksi, "SELECT * FROM materi ORDER BY urutan ASC");
@@ -57,6 +62,9 @@ $kuis = mysqli_query($koneksi, "
             <div>
                 <h1>Kelola Kuis</h1>
                 <p>Tambah, edit, dan hapus soal evaluasi untuk setiap materi web.</p>
+            </div>
+            <div class="page-actions">
+                <a href="import_soal_word.php" class="btn btn-primary">Import Soal Word</a>
             </div>
         </div>
 

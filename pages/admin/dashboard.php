@@ -7,6 +7,7 @@ $total_user = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) AS tota
 $total_siswa = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) AS total FROM users WHERE role='siswa'"))['total'];
 $total_guru = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) AS total FROM users WHERE role='guru'"))['total'];
 $total_materi = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) AS total FROM materi"))['total'];
+$total_helpdesk = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) AS total FROM admin_helpdesk_logs"))['total'];
 ?>
 <!DOCTYPE html>
 <html lang="id">

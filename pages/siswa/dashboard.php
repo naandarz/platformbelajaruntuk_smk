@@ -9,6 +9,7 @@ $total_selesai = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) AS t
 $rata_nilai = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT AVG(skor) AS rata FROM nilai WHERE id_user=$id_user"))['rata'];
 $total_latihan = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) AS total FROM latihan_kode WHERE id_user=$id_user"))['total'];
 $best_game = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT MAX(skor) AS skor FROM game_scores WHERE id_user=$id_user"))['skor'];
+$total_tugas_kumpul = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) AS total FROM pengumpulan_tugas WHERE id_user=$id_user"))['total'];
 $persen = $total_materi > 0 ? round(($total_selesai / $total_materi) * 100) : 0;
 
 $materi = mysqli_query($koneksi, "SELECT * FROM materi ORDER BY urutan ASC LIMIT 5");
@@ -79,6 +80,33 @@ $latihan_terakhir = mysqli_query($koneksi, "
                 <h2><?= $best_game ? $best_game : 0; ?></h2>
             </div>
         </section>
+
+        <div class="chart-card">
+            <h3>Grafik Perkembangan Saya</h3>
+            <p>Ringkasan visual progress belajar, nilai, game, dan tugas.</p>
+            <div class="simple-bar-chart">
+                <div class="chart-row">
+                    <div class="chart-label">Progress</div>
+                    <div class="chart-track"><div class="chart-fill" style="width:<?= $persen; ?>%;"></div></div>
+                    <strong><?= $persen; ?>%</strong>
+                </div>
+                <div class="chart-row">
+                    <div class="chart-label">Nilai</div>
+                    <div class="chart-track"><div class="chart-fill" style="width:<?= $rata_nilai ? round($rata_nilai) : 0; ?>%;"></div></div>
+                    <strong><?= $rata_nilai ? round($rata_nilai) : 0; ?></strong>
+                </div>
+                <div class="chart-row">
+                    <div class="chart-label">Game</div>
+                    <div class="chart-track"><div class="chart-fill" style="width:<?= min(100, ($best_game ? round($best_game / 2) : 0)); ?>%;"></div></div>
+                    <strong><?= $best_game ? $best_game : 0; ?></strong>
+                </div>
+                <div class="chart-row">
+                    <div class="chart-label">Tugas</div>
+                    <div class="chart-track"><div class="chart-fill" style="width:<?= min(100, $total_tugas_kumpul * 20); ?>%;"></div></div>
+                    <strong><?= $total_tugas_kumpul; ?></strong>
+                </div>
+            </div>
+        </div>
 
         <?php if ($materi_lanjut): ?>
             <div class="card next-card" style="margin-bottom:18px;">

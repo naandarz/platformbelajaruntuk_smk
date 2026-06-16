@@ -18,8 +18,9 @@ if (isset($_POST['update'])) {
     $password_baru = $_POST['password_baru'];
 
     if ($password_baru != "") {
+        $password_plain = mysqli_real_escape_string($koneksi, $password_baru);
         $password = md5($password_baru);
-        mysqli_query($koneksi, "UPDATE users SET nama='$nama', role='$role', kelas='$kelas', password='$password' WHERE id_user=$id");
+        mysqli_query($koneksi, "UPDATE users SET nama='$nama', role='$role', kelas='$kelas', password='$password', password_plain='$password_plain' WHERE id_user=$id");
     } else {
         mysqli_query($koneksi, "UPDATE users SET nama='$nama', role='$role', kelas='$kelas' WHERE id_user=$id");
     }
@@ -80,8 +81,25 @@ if (isset($_POST['update'])) {
             </div>
 
             <div class="form-group">
+                <label>Password Saat Ini / Terakhir Diset Admin</label>
+                <div class="password-viewer">
+                    <input type="password" id="current_password_view" class="form-control" value="<?= htmlspecialchars($data['password_plain'] ?: 'Belum tersimpan'); ?>" readonly>
+                    <button type="button" class="eye-btn" onclick="togglePasswordField('current_password_view', this)">👁</button>
+                </div>
+                <small class="form-help">Jika belum tersimpan, masukkan password baru lalu simpan.</small>
+            </div>
+
+            <div class="form-group">
                 <label>Password Baru</label>
-                <input type="password" name="password_baru" class="form-control" placeholder="Kosongkan jika tidak ingin mengganti password">
+                <div class="password-viewer">
+                    <input type="password" name="password_baru" id="edit_password_baru" class="form-control" placeholder="Kosongkan jika tidak ingin mengganti password">
+                    <button type="button" class="eye-btn" onclick="togglePasswordField('edit_password_baru', this)">👁</button>
+                </div>
+                <div class="quick-passwords">
+                    <button type="button" onclick="document.getElementById('edit_password_baru').value='123456'">123456</button>
+                    <button type="button" onclick="document.getElementById('edit_password_baru').value='rpl12345'">rpl12345</button>
+                    <button type="button" onclick="generateTempPassword('edit_password_baru')">Generate</button>
+                </div>
             </div>
 
             <div class="page-actions">
@@ -91,5 +109,6 @@ if (isset($_POST['update'])) {
         </form>
     </main>
 </div>
+<script src="../../assets/js/password-toggle.js"></script>
 </body>
 </html>

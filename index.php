@@ -14,6 +14,7 @@ if (isset($_SESSION['user'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Learn RPL</title>
     <link rel="stylesheet" href="assets/css/style.css">
+<?php include "includes/ui_settings.php"; ?>
 </head>
 <body>
 <div class="landing">

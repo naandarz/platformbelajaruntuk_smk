@@ -1,0 +1,1 @@
+<?php header("Location: kelola_pengguna.php"); exit; ?>

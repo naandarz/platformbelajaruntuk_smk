@@ -12,16 +12,17 @@ if (isset($_SESSION['user'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Learn RPL</title>
+    <title>SmartLearn</title>
     <link rel="stylesheet" href="assets/css/style.css">
 <?php include "includes/ui_settings.php"; ?>
+<?php include "includes/pwa_head.php"; ?>
 </head>
 <body>
 <div class="landing">
     <nav class="navbar">
         <div class="logo">
             <div class="logo-icon">&lt;/&gt;</div>
-            <span>HTML Learn RPL</span>
+            <span>SmartLearn</span>
         </div>
         <a href="login.php" class="btn btn-primary">Masuk LMS</a>
     </nav>

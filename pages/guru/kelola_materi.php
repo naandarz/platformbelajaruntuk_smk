@@ -39,6 +39,7 @@ $materi = mysqli_query($koneksi, "SELECT * FROM materi ORDER BY urutan ASC");
     <meta charset="UTF-8">
     <title>Kelola Materi</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
+<?php include "../../includes/pwa_head.php"; ?>
 </head>
 <body>
 <div class="dashboard-layout">

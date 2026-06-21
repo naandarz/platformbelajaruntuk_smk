@@ -47,6 +47,7 @@ if (isset($_POST['update'])) {
     <meta charset="UTF-8">
     <title>Edit Pertanyaan Game</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
+<?php include "../../includes/pwa_head.php"; ?>
 </head>
 <body>
 <div class="dashboard-layout">

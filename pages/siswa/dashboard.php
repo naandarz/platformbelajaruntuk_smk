@@ -1,6 +1,7 @@
 <?php
 include "../../config/koneksi.php";
 include "../../includes/auth.php";
+include "../../includes/tahap22_bootstrap.php";
 hanya_role('siswa');
 
 $id_user = $_SESSION['user']['id_user'];
@@ -11,6 +12,16 @@ $total_latihan = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) AS t
 $best_game = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT MAX(skor) AS skor FROM game_scores WHERE id_user=$id_user"))['skor'];
 $total_tugas_kumpul = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) AS total FROM pengumpulan_tugas WHERE id_user=$id_user"))['total'];
 $persen = $total_materi > 0 ? round(($total_selesai / $total_materi) * 100) : 0;
+$today = date('Y-m-d');
+$kelas_siswa = mysqli_real_escape_string($koneksi, $_SESSION['user']['kelas'] ?? '');
+$absen_hari_ini_dash = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT * FROM absensi WHERE id_user=$id_user AND tanggal='$today'"));
+$jadwal_terdekat_dash = mysqli_query($koneksi, "
+    SELECT * FROM jadwal_kelas
+    WHERE tanggal >= CURDATE()
+      AND (kelas IS NULL OR kelas='' OR kelas='$kelas_siswa')
+    ORDER BY tanggal ASC, jam_mulai ASC
+    LIMIT 3
+");
 
 $materi = mysqli_query($koneksi, "SELECT * FROM materi ORDER BY urutan ASC LIMIT 5");
 
@@ -41,6 +52,7 @@ $latihan_terakhir = mysqli_query($koneksi, "
     <meta charset="UTF-8">
     <title>Dashboard Siswa</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
+<?php include "../../includes/pwa_head.php"; ?>
 </head>
 <body>
 <div class="dashboard-layout">

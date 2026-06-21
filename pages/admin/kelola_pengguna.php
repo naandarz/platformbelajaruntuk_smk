@@ -177,6 +177,7 @@ $logs = mysqli_query($koneksi, "
     <meta charset="UTF-8">
     <title>Kelola Pengguna & Help Desk</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
+<?php include "../../includes/pwa_head.php"; ?>
 </head>
 <body>
 <div class="dashboard-layout">

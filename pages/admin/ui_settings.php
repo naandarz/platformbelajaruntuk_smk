@@ -24,9 +24,19 @@ $pesan = "";
 $error = "";
 
 $themes = [
+    'smartlearn_clean' => [
+        'name' => 'SmartLearn Clean',
+        'desc' => 'Tema clean dan simple seperti dashboard SaaS modern, cocok untuk LMS sekolah.',
+        'primary' => '#5b6ee1',
+        'accent' => '#d8ff3e',
+        'sidebar' => '#ffffff',
+        'panel' => '#ffffff',
+        'text' => '#1f2937',
+        'heading' => '#111827'
+    ],
     'default_theme' => [
-        'name' => 'Default Learning',
-        'desc' => 'Tema terang bawaan yang bersih dan cocok untuk pembelajaran.',
+        'name' => 'Default Learning (Legacy)',
+        'desc' => 'Tema bawaan lama yang tetap tersedia sebagai pilihan.',
         'primary' => '#4438f2',
         'accent' => '#d8ff3e',
         'sidebar' => '#151923',
@@ -89,7 +99,7 @@ $themes = [
 $ui = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT * FROM ui_settings WHERE id_setting=1"));
 if (!$ui) {
     mysqli_query($koneksi, "INSERT INTO ui_settings (id_setting, app_name, logo_icon, primary_color, accent_color, sidebar_color, radius_size)
-    VALUES (1, 'HTML Learn RPL', '</>', '#4438f2', '#d8ff3e', '#151923', 30)");
+    VALUES (1, 'SmartLearn', '</>', '#4438f2', '#d8ff3e', '#151923', 30)");
     $ui = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT * FROM ui_settings WHERE id_setting=1"));
 }
 
@@ -153,18 +163,18 @@ if (isset($_POST['simpan_ui'])) {
 
 if (isset($_POST['reset_ui'])) {
     mysqli_query($koneksi, "UPDATE ui_settings SET
-        app_name='HTML Learn RPL',
-        logo_icon='</>',
-        primary_color='#4438f2',
+        app_name='SmartLearn',
+        logo_icon='SL',
+        primary_color='#5b6ee1',
         accent_color='#d8ff3e',
         sidebar_color='#151923',
         panel_color='#ffffff',
         text_color='#171827',
         heading_color='#171827',
         font_family='Inter, Arial, sans-serif',
-        font_size=16,
-        radius_size=30,
-        theme_template='default_theme'
+        font_size=15,
+        radius_size=24,
+        theme_template='smartlearn_clean'
         WHERE id_setting=1
     ");
     header("Location: ui_settings.php?status=reset");
@@ -186,6 +196,7 @@ $currentTemplate = $ui['theme_template'] ?? 'default_theme';
     <meta charset="UTF-8">
     <title>Pengaturan UI</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
+<?php include "../../includes/pwa_head.php"; ?>
 </head>
 <body>
 <div class="dashboard-layout">

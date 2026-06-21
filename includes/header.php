@@ -9,7 +9,8 @@ $user = $_SESSION['user'] ?? null;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Learn RPL</title>
+    <title>SmartLearn</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
+<?php include "../includes/pwa_head.php"; ?>
 </head>
 <body>

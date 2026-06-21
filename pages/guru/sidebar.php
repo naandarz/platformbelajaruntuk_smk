@@ -2,7 +2,10 @@
 $currentPage = basename($_SERVER['PHP_SELF']);
 include_once "../../includes/ui_settings.php";
 ?>
+<button class="mobile-menu-toggle" type="button" onclick="toggleSmartLearnSidebar()" aria-label="Buka menu">☰</button>
+<div class="mobile-sidebar-overlay" onclick="closeSmartLearnSidebar()"></div>
 <aside class="sidebar">
+    <button class="mobile-menu-close" type="button" onclick="closeSmartLearnSidebar()" aria-label="Tutup menu">×</button>
     <div class="logo">
         <div class="logo-icon"><?= htmlspecialchars($ui_logo_icon); ?></div>
         <span><?= htmlspecialchars($ui_app_name); ?></span>
@@ -20,6 +23,9 @@ include_once "../../includes/ui_settings.php";
         <a class="<?= $currentPage == 'ranking.php' ? 'active' : ''; ?>" href="ranking.php">Ranking Siswa</a>
         <a class="<?= in_array($currentPage, ['kelola_tugas.php','penilaian_tugas.php']) ? 'active' : ''; ?>" href="kelola_tugas.php">Kelola Tugas</a>
         <a class="<?= $currentPage == 'kelola_kelompok.php' ? 'active' : ''; ?>" href="kelola_kelompok.php">Kelola Kelompok</a>
+        <a class="<?= $currentPage == 'absensi.php' ? 'active' : ''; ?>" href="absensi.php">Absensi Siswa</a>
+        <a class="<?= $currentPage == 'jadwal.php' ? 'active' : ''; ?>" href="jadwal.php">Jadwal Kelas</a>
+        <a class="<?= $currentPage == 'rekap_aktivitas.php' ? 'active' : ''; ?>" href="rekap_aktivitas.php">Rekap Aktivitas</a>
         <a class="<?= in_array($currentPage, ['pesan.php']) ? 'active' : ''; ?>" href="pesan.php">Pesan & Bantuan</a>
         <a class="<?= in_array($currentPage, ['forum.php','forum_detail.php']) ? 'active' : ''; ?>" href="forum.php">Forum Diskusi</a>
         <a class="<?= in_array($currentPage, ['laporan.php','detail_siswa.php']) ? 'active' : ''; ?>" href="laporan.php">Laporan Nilai</a>
@@ -36,4 +42,5 @@ include_once "../../includes/ui_settings.php";
 </aside>
 <div id="toast-root"></div>
 <script src="../../assets/js/gooey-toast.js"></script>
+<script src="../../assets/js/mobile-menu.js"></script>
 <script src="../../assets/js/theme-toggle.js"></script>

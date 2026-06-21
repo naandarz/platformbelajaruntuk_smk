@@ -33,16 +33,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - HTML Learn RPL</title>
+    <title>Login - SmartLearn</title>
     <link rel="stylesheet" href="assets/css/style.css">
 <?php include "includes/ui_settings.php"; ?>
+<?php include "includes/pwa_head.php"; ?>
 </head>
 <body>
 <div class="auth-page">
     <div class="auth-card">
         <div class="logo">
             <div class="logo-icon">&lt;/&gt;</div>
-            <span>HTML Learn RPL</span>
+            <span>SmartLearn</span>
         </div>
         <h1>Masuk Akun</h1>
         <p>Silakan masuk menggunakan akun siswa, guru, atau admin.</p>

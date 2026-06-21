@@ -21,6 +21,7 @@ $tanggal = date("d F Y");
     <meta charset="UTF-8">
     <title>Sertifikat Belajar</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
+<?php include "../../includes/pwa_head.php"; ?>
 </head>
 <body>
 <div class="dashboard-layout">
@@ -60,7 +61,7 @@ $tanggal = date("d F Y");
                 <div class="certificate-content">
                     <div class="logo" style="justify-content:center;">
                         <div class="logo-icon">&lt;/&gt;</div>
-                        <span>HTML Learn RPL</span>
+                        <span>SmartLearn</span>
                     </div>
 
                     <h1 class="certificate-title">Sertifikat Penyelesaian</h1>
@@ -70,7 +71,7 @@ $tanggal = date("d F Y");
 
                     <p class="certificate-desc">
                         Telah menyelesaikan seluruh rangkaian pembelajaran web dasar pada platform
-                        HTML Learn RPL, meliputi materi, kuis interaktif, dan latihan live coding.
+                        SmartLearn, meliputi materi, kuis interaktif, dan latihan live coding.
                     </p>
 
                     <section class="stats-grid" style="margin-top:34px;">
@@ -86,7 +87,7 @@ $tanggal = date("d F Y");
                             <div class="signature-line">Guru Pembimbing</div>
                         </div>
                         <div class="signature-box">
-                            <p>HTML Learn RPL</p>
+                            <p>SmartLearn</p>
                             <div class="signature-line">Sistem LMS</div>
                         </div>
                     </div>

@@ -9,6 +9,7 @@ hanya_role('admin');
     <meta charset="UTF-8">
     <title>Panduan Admin</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
+<?php include "../../includes/pwa_head.php"; ?>
 </head>
 <body>
 <div class="dashboard-layout">

@@ -34,6 +34,7 @@ $pesan = isset($_GET['status']) && $_GET['status'] == 'selesai' ? "Materi berhas
     <meta charset="UTF-8">
     <title><?= $data['judul_materi']; ?></title>
     <link rel="stylesheet" href="../../assets/css/style.css">
+<?php include "../../includes/pwa_head.php"; ?>
 </head>
 <body>
 <div class="dashboard-layout">

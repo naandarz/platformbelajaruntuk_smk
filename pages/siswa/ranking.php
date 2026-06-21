@@ -51,6 +51,7 @@ usort($ranking, function($a, $b) {
     <meta charset="UTF-8">
     <title>Ranking Siswa</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
+<?php include "../../includes/pwa_head.php"; ?>
 </head>
 <body>
 <div class="dashboard-layout">

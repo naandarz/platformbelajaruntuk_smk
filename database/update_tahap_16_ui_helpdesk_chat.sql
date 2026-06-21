@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS chat_messages (
 
 CREATE TABLE IF NOT EXISTS ui_settings (
     id_setting INT AUTO_INCREMENT PRIMARY KEY,
-    app_name VARCHAR(100) NOT NULL DEFAULT 'HTML Learn RPL',
+    app_name VARCHAR(100) NOT NULL DEFAULT 'SmartLearn',
     logo_icon VARCHAR(20) NOT NULL DEFAULT '</>',
     primary_color VARCHAR(20) NOT NULL DEFAULT '#4438f2',
     accent_color VARCHAR(20) NOT NULL DEFAULT '#d8ff3e',
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS ui_settings (
 );
 
 INSERT INTO ui_settings (id_setting, app_name, logo_icon, primary_color, accent_color, sidebar_color, radius_size)
-SELECT 1, 'HTML Learn RPL', '</>', '#4438f2', '#d8ff3e', '#151923', 30
+SELECT 1, 'SmartLearn', '</>', '#4438f2', '#d8ff3e', '#151923', 30
 WHERE NOT EXISTS (SELECT 1 FROM ui_settings WHERE id_setting=1);
 
 INSERT INTO tugas (id_materi, judul_tugas, deskripsi, batas_waktu)

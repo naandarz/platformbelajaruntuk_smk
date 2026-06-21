@@ -45,6 +45,7 @@ $materi_list = mysqli_query($koneksi, "SELECT id_materi, judul_materi FROM mater
     <meta charset="UTF-8">
     <title>Live Coding Web</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
+<?php include "../../includes/pwa_head.php"; ?>
 </head>
 <body>
 <div class="dashboard-layout">

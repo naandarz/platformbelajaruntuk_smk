@@ -36,6 +36,7 @@ $aksi_list = mysqli_query($koneksi, "SELECT DISTINCT aksi FROM admin_helpdesk_lo
     <meta charset="UTF-8">
     <title>Semua Riwayat Help Desk</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
+<?php include "../../includes/pwa_head.php"; ?>
 </head>
 <body>
 <div class="dashboard-layout">

@@ -1,12 +1,16 @@
 <?php
 include "../../config/koneksi.php";
 include "../../includes/auth.php";
+include "../../includes/tahap22_bootstrap.php";
 hanya_role('guru');
 
 $total_siswa = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) AS total FROM users WHERE role='siswa'"))['total'];
 $total_materi = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) AS total FROM materi"))['total'];
 $total_kuis = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) AS total FROM kuis"))['total'];
 $rata_nilai = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT AVG(skor) AS rata FROM nilai"))['rata'];
+$total_absensi_hari_ini = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) AS total FROM absensi WHERE tanggal=CURDATE()"))['total'];
+$total_jadwal_mendatang = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) AS total FROM jadwal_kelas WHERE tanggal >= CURDATE()"))['total'];
+$total_pengumpulan_tugas = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT COUNT(*) AS total FROM pengumpulan_tugas"))['total'];
 
 $grafik_siswa = mysqli_query($koneksi, "
     SELECT users.nama, COALESCE(ROUND(AVG(nilai.skor)), 0) AS rata_nilai
@@ -33,6 +37,7 @@ $nilai = mysqli_query($koneksi, "
     <meta charset="UTF-8">
     <title>Dashboard Guru</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
+<?php include "../../includes/pwa_head.php"; ?>
 </head>
 <body>
 <div class="dashboard-layout">
@@ -85,6 +90,13 @@ $nilai = mysqli_query($koneksi, "
             <a class="stat-card" href="forum.php" style="text-decoration:none;"><span>Forum</span><h2>💬</h2></a>
             <a class="stat-card" href="ranking.php" style="text-decoration:none;"><span>Ranking</span><h2>🏆</h2></a>
             <a class="stat-card" href="import_soal_word.php" style="text-decoration:none;"><span>Import Soal</span><h2>📄</h2></a>
+        </section>
+
+        <section class="stats-grid">
+            <a class="stat-card" href="absensi.php" style="text-decoration:none;"><span>Absensi Hari Ini</span><h2><?= $total_absensi_hari_ini; ?></h2></a>
+            <a class="stat-card" href="jadwal.php" style="text-decoration:none;"><span>Jadwal Mendatang</span><h2><?= $total_jadwal_mendatang; ?></h2></a>
+            <a class="stat-card" href="kelola_tugas.php" style="text-decoration:none;"><span>Tugas Terkumpul</span><h2><?= $total_pengumpulan_tugas; ?></h2></a>
+            <a class="stat-card" href="rekap_aktivitas.php" style="text-decoration:none;"><span>Rekap Aktivitas</span><h2>📊</h2></a>
         </section>
 
         <div class="table-wrapper">

@@ -1,185 +1,701 @@
-Berikut adalah pembaharuan dokumen **README.md** yang telah diintegrasikan secara menyeluruh dari **Tahap 1 hingga Tahap 20**. Semua fitur baru seperti sistem tema, forum diskusi, impor soal Word, *live chat*, manajemen kelompok, hingga panel *IT Help Desk* telah disusun secara terstruktur, interaktif, dan penuh dengan ikon visual agar menarik saat dipasang di GitHub.
+SmartLearn - Web LMS Pembelajaran HTML Interaktif
 
----
+Cara menjalankan di XAMPP:
+1. Extract folder smartlearn ke folder htdocs.
+   Contoh: C:/xampp/htdocs/smartlearn
+2. Jalankan Apache dan MySQL di XAMPP.
+3. Buka phpMyAdmin.
+4. Import file database/html_learn_rpl.sql.
+5. Buka browser:
+   http://localhost/smartlearn/
 
-# 🌐 HTML Learn RPL - Web LMS Pembelajaran Web Interaktif (v20.0 ✨)
+Akun demo:
+- Siswa: siswa@demo.com / 123456
+- Guru : guru@demo.com / 123456
+- Admin: admin@demo.com / 123456
 
-**HTML Learn RPL** adalah platform *Learning Management System* (LMS) berbasis web interaktif yang dikembangkan secara khusus untuk siswa SMK jurusan Rekayasa Perangkat Lunak (RPL). Aplikasi ini memfasilitasi pembelajaran teknologi web dasar—**HTML5, CSS3, dan JavaScript**—dalam satu ekosistem yang seru, modern, dan penuh fitur kelas atas.
+Fitur yang sudah ada:
+- Landing page
+- Login multi role
+- Dashboard siswa
+- Materi HTML
+- Detail materi
+- Live coding HTML
+- Kuis otomatis
+- Riwayat belajar siswa
+- Dashboard guru
+- Kelola materi
+- Kelola kuis
+- Laporan nilai
+- Dashboard admin
+- Kelola pengguna
 
-Aplikasi ini mengusung konsep visual **Playful Modern UI** dengan kombinasi warna *neon lime*, *electric blue*, *dark panel*, *rounded card*, serta *decorative blob* yang dinamis, didukung oleh mesin kustomisasi tema yang sangat fleksibel.
-
----
-
-## 🚀 Fitur Utama Berdasarkan Peran
-
-### 🧑‍🎓 Fitur Siswa
-
-* 📊 **Dashboard Pintar:** Menampilkan kemajuan belajar, statistik latihan, rekomendasi materi berikutnya secara otomatis, serta skor game terbaik.
-* 📚 **Materi Web Interaktif:** Modul HTML, CSS, dan JavaScript lengkap dengan pencarian materi, navigasi *next/prev*, dan status nilai terbaik.
-* 💻 **Super Live Coding:** Editor kode terintegrasi untuk mengeksekusi HTML, CSS, dan JS sekaligus dengan fitur simpan hasil latihan.
-* 📝 **Kuis & Penyelarasan Otomatis:** Kuis interaktif dengan umpan balik jawaban benar setelah selesai. Skor $\ge 75$ otomatis menandai materi selesai.
-* 🏆 **Sistem Peringkat (Ranking):** Papan klaster nilai dan keaktifan siswa se-kelas.
-* 👥 **Kelompok Saya:** Melihat daftar kelompok belajar yang dibentuk oleh guru.
-* 📤 **Manajemen Tugas:** Mengunggah tugas individu maupun kelompok dengan pelacakan status nilai/umpan balik dari guru.
-* 💬 **Forum Diskusi & Live Chat:** Wadah interaktif untuk berdiskusi per materi dan fitur pesan bantuan terenkapsulasi *bubble chat*.
-* 🎮 **Coding Quest Game:** Game edukasi 4 mode (HTML, CSS, JS, Campuran) dengan sistem nyawa (*lives*), level, dan riwayat skor.
-* 🎓 **E-Sertifikat:** Sertifikat digital otomatis terbuka dan dapat dicetak jika seluruh modul selesai dengan rata-rata nilai kuis minimal 75.
-
-### 👨‍🏫 Fitur Guru
-
-* 📖 **Kelola Pembelajaran:** Manajemen penuh (Tambah/Edit/Hapus) untuk materi web dan bank soal kuis.
-* 📥 **Word Quiz Importer:** Fitur unggah dokumen `.docx` untuk impor soal pilihan ganda otomatis dilengkapi sistem *parsing preview* cerdas.
-* 📂 **Kelola Tugas & Kelompok:** Membuat tugas (Individu/Kelompok), membentuk kelompok belajar, dan mengelompokkan tugas siswa berdasarkan status filter.
-* 📝 **Evaluasi Fleksibel:** Memantau kode *live coding* siswa, riwayat skor game, grafik progress nilai, dan memberikan umpan balik tugas.
-* 🖨️ **Instrumen Penilaian:** Fitur cetak instrumen penilaian produk berbasis skala Likert (1-5).
-
-### 🛠️ Fitur Admin (IT Help Desk & Super UI)
-
-* 👥 **Manajemen Pengguna Terpusat:** Kontrol penuh akun siswa, guru, dan admin dari satu halaman eksekutif.
-* 🔑 **IT Help Desk Panel:** Pencarian akun instan, fitur *reset password* kilat, dan tombol *generate* password sementara.
-* 👁️ **Password Viewer:** Fitur intip kata sandi lewat ikon mata (*show/hide* `password_plain`) untuk membantu pengguna yang lupa sandi.
-* 🎨 **Theme Engine Customizer:** Pengaturan nama aplikasi, logo, jenis/ukuran font, radius panel, hingga kustomisasi palet warna UI global.
-
----
-
-## 🎨 Pilihan Tema Dashboard (Engine Build v20)
-
-Admin dapat mengubah total estetika visual seluruh pengguna ke dalam beberapa *template* populer:
-
-* 🌟 **Default Learning** (Playful Neon Cyan/Lime)
-* 🦅 **One Dark Pro** (Professional Developer Style)
-* 🧛 **Dracula Official** (High-Contrast Vampire Palette)
-* 🌌 **Tokyo Night** (Neon Cyberpunk Vibe)
-* ❄️ **Nord** (Clean Arctic Elegant Blue)
-* 🦉 **Night Owl** (Sleek Deep Blue Accent)
-
----
-
-## 💻 Spesifikasi Teknologi
-
-* **Bahasa Pemrograman:** PHP Native (Struktur Prosedural untuk Pembelajaran) & JavaScript (ES6+)
-* **Database:** MySQL / MariaDB
-* **Desain UI:** CSS3 Custom Variables (Sistem Tema Dinamis) & Animasi Gooey
-* **Library Eksternal:** `ZipArchive` PHP Extension (Wajib aktif untuk Fitur Impor Word)
-* **Lingkungan Lokal:** XAMPP v3.3+ (Apache & MySQL)
-
----
-
-## 📂 Peta Direktori Utama
-
-```text
-html-learn-rpl/
-│
-├── assets/
-│   ├── css/
-│   │   └── style.css            # Desain inti & komponen gooey toast
-│   └── js/
-│       ├── main.js
-│       ├── gooey-toast.js      # Animasi pop-up notifikasi
-│       ├── theme-toggle.js     # Pengatur mode gelap/terang & tema
-│       └── password-toggle.js  # Utilitas show/hide password
-│
-├── config/
-│   └── koneksi.php
-│
-├── database/                   # Berkas skema SQL & migrasi bertahap
-│   ├── html_learn_rpl.sql
-│   ├── update_tahap_3.sql
-│   ├── update_tahap_6_css_js.sql
-│   ├── update_tahap_8_game.sql
-│   ├── update_tahap_9_kelola_game.sql
-│   ├── update_tahap_13_super_features.sql
-│   ├── update_tahap_15_admin_helpdesk.sql
-│   ├── update_tahap_16_ui_helpdesk_chat.sql
-│   ├── update_tahap_18_password_ui_fix.sql
-│   └── update_tahap_20_groups_theme.sql
-│
-├── includes/
-│   ├── auth.php
-│   ├── header.php
-│   ├── footer.php
-│   └── ui_settings.php         # Engine penyimpan preferensi gaya dari Admin
-│
-├── pages/
-│   ├── siswa/                  # (Materi, Live Coding, Kuis, Game, Tugas, Forum, Ranking, Kelompok)
-│   ├── guru/                   # (Kelola Materi, Kuis, Kelompok, Tugas, Impor Word, Instrumen)
-│   └── admin/                  # (Kelola Pengguna/Helpdesk, Pesan, UI Settings, Logs)
-│
-├── uploads/
-│   └── tugas/                  # Tempat penyimpanan berkas unggahan siswa
-└── index.php
-
-```
-
----
-
-## ⚙️ Panduan Instalasi Pertama Kali (Fresh Install)
-
-1. **Siapkan EnvXAMPP:** Pastikan Apache dan MySQL menyala. Pastikan ekstensi `ZipArchive` di `php.ini` Anda telah aktif.
-2. **Ekstrak Berkas:** Tempatkan folder hasil ekstrak ke direktori target:
-> `C:/xampp/htdocs/html-learn-rpl`  *(atau nama folder `lms_rpl`)*
+Catatan:
+Password pada versi awal ini menggunakan MD5 agar mudah dipahami untuk proyek latihan.
+Untuk versi produksi sebaiknya diganti menggunakan password_hash() dan password_verify().
 
 
-3. **Konfigurasi Database:**
-* Masuk ke `http://localhost/phpmyadmin/`
-* Buat basis data bernama `html_learn_rpl`
-* Impor berkas dasar: `database/html_learn_rpl.sql`
+Update Tahap 2:
+- Sidebar aktif sesuai halaman yang sedang dibuka.
+- Guru bisa edit materi.
+- Guru bisa edit kuis.
+- Halaman kelola materi dan kelola kuis dibuat lebih rapi.
+- Laporan guru ditingkatkan menjadi laporan progress siswa.
+- Kuis siswa menampilkan jawaban benar setelah selesai mengerjakan.
+- Tampilan tabel dan tombol aksi diperbaiki.
+
+Cara update ke project lokal:
+1. Extract ZIP tahap 2.
+2. Copy semua isi folder smartlearn.
+3. Paste ke D:/xampp/htdocs/lms_rpl.
+4. Pilih Replace/Overwrite jika diminta.
+5. Refresh browser.
 
 
-4. **Jalankan Aplikasi:** Akses tautan URL melalui peramban: `http://localhost/html-learn-rpl/`
+Update Tahap 3:
+- Siswa bisa menyimpan latihan coding dari halaman Live Coding.
+- Riwayat siswa menampilkan hasil latihan coding yang sudah disimpan.
+- Guru bisa melihat detail progress per siswa.
+- Guru bisa melihat kode latihan siswa pada halaman detail siswa.
+- Halaman profil ditambahkan untuk siswa, guru, dan admin.
+- Sidebar ditambah menu Profil.
+- File update database ditambahkan: database/update_tahap_3.sql
 
----
-
-## 🔄 Prosedur Pembaruan (Kumulatif Tahap 2 s.d 20)
-
-Jika Anda melakukan pembaruan secara bertahap dari repositori ZIP, ikuti langkah-langkah standarisasi struktur berikut:
-
-1. Ekstrak ZIP pembaruan tahap terbaru Anda.
-2. Salin dan tempel (*overwrite/replace*) seluruh isi berkas ke dalam target folder instalasi htdocs Anda (`html-learn-rpl` atau `lms_rpl`).
-3. **Eksekusi SQL Berurutan (Penting):** Jika pembaruan menyertakan berkas basis data baru, masuk ke phpMyAdmin, pilih database `html_learn_rpl` dan lakukan impor berkas SQL berikut secara berkini:
-* 🛑 *Tahap 3:* `database/update_tahap_3.sql`
-* 🛑 *Tahap 6:* `database/update_tahap_6_css_js.sql`
-* 🛑 *Tahap 8:* `database/update_tahap_8_game.sql`
-* 🛑 *Tahap 9:* `database/update_tahap_9_kelola_game.sql`
-* 🛑 *Tahap 13:* `database/update_tahap_13_super_features.sql`
-* 🛑 *Tahap 15:* `database/update_tahap_15_admin_helpdesk.sql`
-* 🛑 *Tahap 16:* `database/update_tahap_16_ui_helpdesk_chat.sql`
-* 🛑 *Tahap 18/19:* `database/update_tahap_18_password_ui_fix.sql`
-* 🛑 *Tahap 20:* `database/update_tahap_20_groups_theme.sql`
+Cara update dari Tahap 2 ke Tahap 3:
+1. Extract ZIP tahap 3.
+2. Copy semua isi folder smartlearn.
+3. Paste ke D:/xampp/htdocs/lms_rpl.
+4. Pilih Replace/Overwrite jika diminta.
+5. Buka phpMyAdmin.
+6. Pilih database html_learn_rpl.
+7. Import file database/update_tahap_3.sql.
+8. Refresh browser dan coba fitur Live Coding.
 
 
-4. Lakukan pembersihan cache peramban dengan menekan kombinasi tombol **Ctrl + F5** agar CSS gaya gooey, penataan sidebar baru, dan script tema terbaca sempurna.
+Update Tahap 4:
+- Guru memiliki halaman baru Latihan Siswa untuk memantau semua hasil live coding.
+- Laporan guru dapat diexport ke CSV.
+- Admin dapat mengedit data pengguna.
+- Admin tidak dapat menghapus akun yang sedang dipakai.
+- Dashboard siswa menampilkan rekomendasi materi berikutnya.
+- Dashboard siswa menampilkan jumlah dan latihan coding terakhir.
+- Detail materi memiliki tombol materi sebelumnya dan berikutnya.
+- Tampilan role pengguna diberi badge warna berbeda.
 
----
+Cara update dari Tahap 3 ke Tahap 4:
+1. Extract ZIP tahap 4.
+2. Copy semua isi folder smartlearn.
+3. Paste ke D:/xampp/htdocs/lms_rpl.
+4. Pilih Replace/Overwrite jika diminta.
+5. Tidak perlu import database baru jika update_tahap_3.sql sudah pernah dijalankan.
+6. Refresh browser.
 
-## 🔑 Kredensial Akun Pengujian (Demo)
 
-| Peran Pengguna | Email Login | Kata Sandi |
-| --- | --- | --- |
-| 🧑‍🎓 **Siswa** | `siswa@demo.com` | `123456` |
-| 👨‍🏫 **Guru** | `guru@demo.com` | `123456` |
-| 🛠️ **Admin** | `admin@demo.com` | `123456` |
+Update Tahap 5:
+- Siswa memiliki fitur Sertifikat Belajar.
+- Sertifikat hanya terbuka jika seluruh materi selesai dan rata-rata nilai minimal 75.
+- Kuis dengan skor minimal 75 otomatis menandai materi sebagai selesai.
+- Halaman Materi HTML siswa memiliki fitur pencarian dan status nilai terbaik.
+- Ditambahkan halaman Panduan untuk siswa, guru, dan admin.
+- Guru memiliki halaman Instrumen Penilaian Produk yang dapat dicetak.
+- Instrumen penilaian mengikuti model skala Likert 1 sampai 5.
+- Sidebar diperbarui dengan menu Sertifikat, Panduan, dan Instrumen.
+- Tidak ada perubahan database baru pada tahap 5.
 
----
+Cara update dari Tahap 4 ke Tahap 5:
+1. Extract ZIP tahap 5.
+2. Copy semua isi folder smartlearn.
+3. Paste ke D:/xampp/htdocs/lms_rpl.
+4. Pilih Replace/Overwrite jika diminta.
+5. Tidak perlu import database baru.
+6. Refresh browser.
 
-## 🔒 Catatan Keamanan Aplikasi
 
-> [!WARNING]
-> Berkas bawaan pada proyek latihan lokal/skripsi ini menggunakan enkripsi **MD5** dan menyediakan visualisasi kolom `password_plain` pada tabel pengguna guna mendukung fungsionalitas panel darurat *IT Help Desk*.
-> Jika platform ini akan diunggah atau diimplementasikan pada lingkungan **Produksi/Hosting Publik**, sangat direkomendasikan untuk mengubah mekanisme penyimpanan kata sandi menggunakan fungsi bawaan PHP standar industri: `password_hash()` dan `password_verify()`.
+Update Tahap 6:
+- Ditambahkan materi CSS:
+  1. Pengenalan CSS
+  2. Selector dan Properti CSS
+  3. Box Model CSS
+- Ditambahkan materi JavaScript:
+  1. Pengenalan JavaScript
+  2. DOM dan Event JavaScript
+- Ditambahkan kuis untuk setiap materi CSS dan JavaScript.
+- Label beberapa halaman diperbarui dari Materi HTML menjadi Materi Web.
+- Landing page diperbarui menjadi HTML, CSS, dan JavaScript.
+- Live Coding tetap menggunakan satu editor dan preview, sehingga bisa menjalankan HTML, CSS, dan JavaScript sekaligus.
 
----
+Cara update dari Tahap 5 ke Tahap 6:
+1. Extract ZIP tahap 6.
+2. Copy semua isi folder smartlearn.
+3. Paste ke D:/xampp/htdocs/lms_rpl.
+4. Pilih Replace/Overwrite jika diminta.
+5. Buka phpMyAdmin.
+6. Pilih database html_learn_rpl.
+7. Import file database/update_tahap_6_css_js.sql.
+8. Refresh browser.
 
-## 📤 Push Proyek ke GitHub
 
-Gunakan rentetan perintah *command-line* berikut untuk mengunggah pembaruan arsitektur aplikasi ini ke repositori Anda sendiri:
+Update Tahap 7:
+- UI diperbarui dengan gaya playful modern seperti referensi:
+  neon lime, electric blue, dark panel, rounded card, dan decorative blob.
+- Landing page dibuat lebih menarik dengan section HTML, CSS, dan JavaScript.
+- Semua panel utama seperti card, dashboard, tabel, form, tombol, sidebar, dan editor mendapat style baru.
+- Sidebar menggunakan warna dark dengan active menu hijau neon.
+- Dashboard dan halaman materi memiliki card yang lebih hidup dan interaktif.
+- Tidak ada perubahan database pada tahap 7.
 
-```bash
-git init
-git add .
-git commit -m "🚀 Upgrade Major v20: Implementasi Sistem Tema, Manajemen Grup, dan IT Help Desk"
-git branch -M main
-git remote add origin https://github.com/USERNAME_ANDA/html-learn-rpl.git
-git push -u origin main
+Cara update dari Tahap 6 ke Tahap 7:
+1. Extract ZIP tahap 7.
+2. Copy semua isi folder smartlearn.
+3. Paste ke D:/xampp/htdocs/lms_rpl.
+4. Pilih Replace/Overwrite jika diminta.
+5. Tidak perlu import database baru.
+6. Refresh browser dengan Ctrl + F5 agar CSS terbaru terbaca.
 
-```
+
+Update Tahap 8:
+- Ditambahkan Game Coding Quest untuk siswa.
+- Mode game: HTML, CSS, JavaScript, dan Campuran.
+- Game memiliki skor, level, nyawa, feedback jawaban, dan riwayat skor.
+- Skor game dapat disimpan ke database.
+- Guru memiliki menu Laporan Game untuk melihat skor siswa.
+- Dashboard siswa menampilkan skor game terbaik.
+- File update database ditambahkan: database/update_tahap_8_game.sql
+
+Cara update dari Tahap 7 ke Tahap 8:
+1. Extract ZIP tahap 8.
+2. Copy semua isi folder smartlearn.
+3. Paste ke D:/xampp/htdocs/lms_rpl.
+4. Pilih Replace/Overwrite jika diminta.
+5. Buka phpMyAdmin.
+6. Pilih database html_learn_rpl.
+7. Import file database/update_tahap_8_game.sql.
+8. Refresh browser dengan Ctrl + F5.
+
+
+Update Tahap 9:
+- Guru dapat mengelola pertanyaan Game Coding.
+- Guru dapat menambah, mengedit, menghapus, mengaktifkan, dan menonaktifkan pertanyaan game.
+- Guru dapat mengatur setting game:
+  1. Jumlah soal
+  2. Jumlah nyawa
+  3. Skor per jawaban benar
+- Game siswa sekarang mengambil pertanyaan dari database, bukan dari soal hardcode JavaScript.
+- Pertanyaan game mendukung mode HTML, CSS, JavaScript, dan Campuran.
+- File update database ditambahkan: database/update_tahap_9_kelola_game.sql
+
+Cara update dari Tahap 8 ke Tahap 9:
+1. Extract ZIP tahap 9.
+2. Copy semua isi folder smartlearn.
+3. Paste ke D:/xampp/htdocs/lms_rpl.
+4. Pilih Replace/Overwrite jika diminta.
+5. Buka phpMyAdmin.
+6. Pilih database html_learn_rpl.
+7. Import file database/update_tahap_9_kelola_game.sql.
+8. Refresh browser dengan Ctrl + F5.
+
+
+Update Tahap 10:
+- Ditambahkan popup notifikasi animasi bergaya gooey/toast.
+- Toast muncul otomatis saat:
+  1. Login berhasil
+  2. Login gagal
+  3. Data berhasil ditambah
+  4. Data berhasil diedit
+  5. Data berhasil dihapus
+  6. Setting berhasil diperbarui
+  7. Skor game tersimpan
+  8. Materi ditandai selesai
+- File baru:
+  assets/js/gooey-toast.js
+- CSS toast ditambahkan di assets/css/style.css.
+- Tidak ada perubahan database pada tahap 10.
+
+Cara update dari Tahap 9 ke Tahap 10:
+1. Extract ZIP tahap 10.
+2. Copy semua isi folder smartlearn.
+3. Paste ke D:/xampp/htdocs/lms_rpl.
+4. Pilih Replace/Overwrite jika diminta.
+5. Tidak perlu import database baru.
+6. Refresh browser dengan Ctrl + F5.
+
+
+Update Tahap 11:
+- Ditambahkan fitur Import Soal Word untuk guru.
+- Guru dapat mengupload dokumen .docx berisi soal pilihan ganda.
+- Sistem membaca format:
+  1. Pertanyaan
+  A. Opsi A
+  B. Opsi B
+  C. Opsi C
+  D. Opsi D
+  Jawaban: A
+- Sistem menampilkan preview soal sebelum dimasukkan ke database.
+- Soal valid dapat langsung diimport menjadi kuis sesuai materi yang dipilih.
+- Soal yang formatnya belum lengkap akan diberi tanda Perlu Dicek.
+- Tidak ada perubahan database baru pada tahap 11.
+- Catatan: membutuhkan ekstensi PHP ZipArchive aktif di XAMPP.
+
+Cara update dari Tahap 10 ke Tahap 11:
+1. Extract ZIP tahap 11.
+2. Copy semua isi folder smartlearn.
+3. Paste ke D:/xampp/htdocs/lms_rpl.
+4. Pilih Replace/Overwrite jika diminta.
+5. Tidak perlu import database baru.
+6. Refresh browser dengan Ctrl + F5.
+7. Login sebagai guru dan buka menu Import Soal Word.
+
+
+Update Tahap 12:
+- Memperbaiki bug Import Soal Word.
+- Sebelumnya, jika Word membaca opsi dalam satu paragraf seperti:
+  Apa fungsi HTML?A. ...B. ...C. ...D. ...Jawaban: C
+  maka opsi tidak terbaca.
+- Parser sekarang otomatis memisahkan:
+  1. Nomor soal
+  2. Opsi A, B, C, D
+  3. Jawaban/Kunci/Answer/ANS
+- Tidak ada perubahan database baru pada tahap 12.
+
+Cara update dari Tahap 11 ke Tahap 12:
+1. Extract ZIP tahap 12.
+2. Copy semua isi folder smartlearn.
+3. Paste ke D:/xampp/htdocs/lms_rpl atau D:/xampp/htdocs/platformbelajaruntuk_smk.
+4. Pilih Replace/Overwrite jika diminta.
+5. Tidak perlu import database baru.
+6. Refresh browser dengan Ctrl + F5.
+
+
+Update Tahap 13:
+- Ditambahkan fitur Ranking Siswa untuk siswa dan guru.
+- Ditambahkan fitur Upload Tugas Siswa.
+- Guru dapat membuat tugas, melihat pengumpulan, dan memberikan nilai/feedback.
+- Ditambahkan fitur Forum Diskusi untuk siswa dan guru.
+- Ditambahkan dashboard grafik progress/nilai.
+- Ditambahkan tombol Export PDF menggunakan fitur print browser.
+- Ditambahkan mode tema dark/light.
+- File baru:
+  assets/js/theme-toggle.js
+  pages/siswa/ranking.php
+  pages/siswa/tugas.php
+  pages/siswa/forum.php
+  pages/siswa/forum_detail.php
+  pages/guru/ranking.php
+  pages/guru/kelola_tugas.php
+  pages/guru/forum.php
+  pages/guru/forum_detail.php
+  database/update_tahap_13_super_features.sql
+- Folder upload:
+  uploads/tugas/
+- Wajib import database:
+  database/update_tahap_13_super_features.sql
+
+Cara update dari Tahap 12 ke Tahap 13:
+1. Extract ZIP tahap 13.
+2. Copy semua isi folder smartlearn.
+3. Paste ke D:/xampp/htdocs/lms_rpl atau D:/xampp/htdocs/platformbelajaruntuk_smk.
+4. Pilih Replace/Overwrite jika diminta.
+5. Buka phpMyAdmin.
+6. Pilih database html_learn_rpl.
+7. Import file database/update_tahap_13_super_features.sql.
+8. Refresh browser dengan Ctrl + F5.
+
+
+Update Tahap 14:
+- Memperbaiki bug sidebar/menu yang terlihat kosong atau terkena background saat halaman discroll ke bawah.
+- Sidebar sekarang memiliki tinggi tetap 100vh dan scroll sendiri.
+- Menu bagian bawah seperti Bantuan, Profil, Logout, dan tombol Tema tetap berada di dalam background sidebar.
+- Tidak ada perubahan database baru pada tahap 14.
+
+Cara update dari Tahap 13 ke Tahap 14:
+1. Extract ZIP tahap 14.
+2. Copy semua isi folder smartlearn.
+3. Paste ke D:/xampp/htdocs/lms_rpl atau D:/xampp/htdocs/platformbelajaruntuk_smk.
+4. Pilih Replace/Overwrite jika diminta.
+5. Tidak perlu import database baru.
+6. Refresh browser dengan Ctrl + F5.
+
+
+Update Tahap 15:
+- Ditambahkan fitur Admin IT Help Desk.
+- Admin dapat mencari akun berdasarkan nama, email, kelas, dan role.
+- Admin dapat reset password akun siswa, guru, atau admin.
+- Admin dapat menggunakan password cepat seperti 123456, rpl12345, atau smkbisa123.
+- Admin dapat mengedit cepat nama, kelas, dan role akun.
+- Sistem mencatat riwayat tindakan help desk.
+- Dashboard admin ditambahkan shortcut IT Help Desk.
+- File baru:
+  pages/admin/helpdesk.php
+  database/update_tahap_15_admin_helpdesk.sql
+- Wajib import database:
+  database/update_tahap_15_admin_helpdesk.sql
+
+Cara update dari Tahap 14 ke Tahap 15:
+1. Extract ZIP tahap 15.
+2. Copy semua isi folder smartlearn.
+3. Paste ke D:/xampp/htdocs/lms_rpl atau D:/xampp/htdocs/platformbelajaruntuk_smk.
+4. Pilih Replace/Overwrite jika diminta.
+5. Buka phpMyAdmin.
+6. Pilih database html_learn_rpl.
+7. Import file database/update_tahap_15_admin_helpdesk.sql.
+8. Refresh browser dengan Ctrl + F5.
+9. Login sebagai admin dan buka menu IT Help Desk.
+
+
+Update Tahap 16:
+- Merapikan Kelola Tugas guru agar pengumpulan tidak terlalu panjang.
+- Pengumpulan tugas sekarang dikelompokkan berdasarkan tugas dan bisa difilter:
+  1. Belum Dinilai
+  2. Sudah Dinilai
+  3. Semua
+  4. Berdasarkan Materi
+- Menu IT Help Desk admin digabung ke Kelola Pengguna.
+- Admin dapat tambah akun, edit cepat akun, reset password, hapus akun, dan melihat riwayat bantuan akun dari satu halaman.
+- Ditambahkan fitur Pesan & Bantuan untuk siswa, guru, dan admin.
+- Pesan & Bantuan berisi:
+  1. Notifikasi
+  2. Live chat
+  3. Riwayat percakapan
+- Notifikasi otomatis muncul saat:
+  1. Admin membuat akun
+  2. Admin mengubah akun
+  3. Admin reset password
+  4. Guru membuat tugas baru
+  5. Siswa mengumpulkan tugas
+  6. Guru memberi nilai tugas
+- Admin dapat mengatur UI:
+  1. Nama aplikasi
+  2. Icon/logo singkat
+  3. Warna utama
+  4. Warna aksen
+  5. Warna sidebar
+  6. Radius panel
+- UI dirapikan mengikuti prinsip konsistensi, feedback informatif, pencegahan error, kontrol pengguna, dan mengurangi beban informasi.
+- File baru:
+  includes/ui_settings.php
+  assets/js/theme-toggle.js sudah tetap digunakan
+  pages/siswa/pesan.php
+  pages/guru/pesan.php
+  pages/admin/pesan.php
+  pages/admin/ui_settings.php
+  database/update_tahap_16_ui_helpdesk_chat.sql
+- Wajib import database:
+  database/update_tahap_16_ui_helpdesk_chat.sql
+
+Cara update dari Tahap 15 ke Tahap 16:
+1. Extract ZIP tahap 16.
+2. Copy semua isi folder smartlearn.
+3. Paste ke D:/xampp/htdocs/lms_rpl atau D:/xampp/htdocs/platformbelajaruntuk_smk.
+4. Pilih Replace/Overwrite jika diminta.
+5. Buka phpMyAdmin.
+6. Pilih database html_learn_rpl.
+7. Import file database/update_tahap_16_ui_helpdesk_chat.sql.
+8. Refresh browser dengan Ctrl + F5.
+9. Login sebagai admin dan cek Kelola Pengguna, Pesan Bantuan, dan Pengaturan UI.
+
+
+Update Tahap 17:
+- Memperbaiki tampilan Pesan & Bantuan yang sebelumnya belum rapi.
+- Pesan chat sekarang tampil sebagai bubble chat yang jelas.
+- Chat dari diri sendiri berada di kanan dengan warna aksen.
+- Chat dari pengguna lain berada di kiri.
+- Area chat memiliki tinggi tetap dan scroll sendiri.
+- Notifikasi dan riwayat chat dipisah dalam panel kiri.
+- Live chat berada di panel kanan agar alur lebih jelas.
+- Tidak ada perubahan database baru pada tahap 17.
+
+Cara update dari Tahap 16 ke Tahap 17:
+1. Extract ZIP tahap 17.
+2. Copy semua isi folder smartlearn.
+3. Paste ke D:/xampp/htdocs/lms_rpl atau D:/xampp/htdocs/platformbelajaruntuk_smk.
+4. Pilih Replace/Overwrite jika diminta.
+5. Tidak perlu import database baru.
+6. Refresh browser dengan Ctrl + F5.
+
+
+Update Tahap 18:
+- Admin dapat melihat password sementara/terakhir diset untuk setiap user di menu Kelola Pengguna.
+- Ditambahkan icon mata untuk menampilkan dan menyembunyikan password.
+- Form tambah akun dan reset password memiliki tombol show/hide password.
+- Ditambahkan tombol generate password sementara.
+- Password baru yang dibuat/reset admin akan tersimpan pada kolom password_plain agar admin help desk bisa membantu siswa/guru yang lupa password.
+- Riwayat Help Desk dibuat lebih ringkas, hanya menampilkan beberapa aktivitas terbaru.
+- Ditambahkan halaman "Lihat Semua Riwayat Help Desk" dengan filter dan export PDF.
+- Riwayat Belajar siswa dibuat lebih ringkas dengan tombol "Lihat Semua Riwayat".
+- Beberapa UI diperhalus agar card, tabel, dan teks lebih nyaman dibaca.
+- File baru:
+  assets/js/password-toggle.js
+  pages/admin/helpdesk_logs.php
+  pages/siswa/riwayat_semua.php
+  database/update_tahap_18_password_ui_fix.sql
+- Wajib import database:
+  database/update_tahap_18_password_ui_fix.sql
+
+Catatan keamanan:
+- Fitur melihat password dibuat untuk kebutuhan project lokal/skripsi dan peran admin sebagai IT Help Desk.
+- Untuk aplikasi produksi nyata, password sebaiknya tidak disimpan dalam bentuk teks biasa.
+
+Cara update dari Tahap 17 ke Tahap 18:
+1. Extract ZIP tahap 18.
+2. Copy semua isi folder smartlearn.
+3. Paste ke D:/xampp/htdocs/lms_rpl atau D:/xampp/htdocs/platformbelajaruntuk_smk.
+4. Pilih Replace/Overwrite jika diminta.
+5. Buka phpMyAdmin.
+6. Pilih database html_learn_rpl.
+7. Import file database/update_tahap_18_password_ui_fix.sql.
+8. Refresh browser dengan Ctrl + F5.
+9. Login sebagai admin dan buka Kelola Pengguna.
+
+
+Update Tahap 19:
+- Memperbaiki UI Kelola Pengguna & Help Desk yang sempat tampil aneh karena password_plain belum aman.
+- Halaman Kelola Pengguna ditulis ulang lebih rapi:
+  1. Tambah akun
+  2. Cari/filter akun
+  3. Lihat password sementara
+  4. Show/hide password dengan icon mata
+  5. Reset password
+  6. Edit cepat akun
+  7. Riwayat Help Desk ringkas
+- Kolom password_plain akan dibuat otomatis dari halaman Kelola Pengguna jika belum ada.
+- Ditambahkan halaman Lihat Semua Riwayat Help Desk.
+- Pesan & Bantuan siswa/guru/admin ditulis ulang agar bubble chat dan panel notifikasi tampil rapi.
+- Kelola Tugas guru dipoles lagi dan filter default diubah ke Semua agar data pengumpulan tidak terlihat kosong setelah dinilai.
+- CSS UI diperbaiki untuk card, chat, password viewer, dan monitoring tugas.
+- File baru/diubah:
+  assets/js/password-toggle.js
+  pages/admin/kelola_pengguna.php
+  pages/admin/helpdesk_logs.php
+  pages/siswa/pesan.php
+  pages/guru/pesan.php
+  pages/admin/pesan.php
+  pages/guru/kelola_tugas.php
+  database/update_tahap_18_password_ui_fix.sql tetap digunakan.
+- Database tambahan yang tetap perlu ada:
+  database/update_tahap_18_password_ui_fix.sql
+
+Cara update dari Tahap 18 ke Tahap 19:
+1. Extract ZIP tahap 19.
+2. Copy semua isi folder smartlearn.
+3. Paste ke D:/xampp/htdocs/lms_rpl atau D:/xampp/htdocs/platformbelajaruntuk_smk.
+4. Pilih Replace/Overwrite jika diminta.
+5. Import database/update_tahap_18_password_ui_fix.sql jika belum pernah.
+6. Refresh browser dengan Ctrl + F5.
+
+
+Update Tahap 20:
+- Memperbaiki UI siswa agar lebih konsisten dan nyaman.
+- Halaman siswa seperti Pesan, Tugas, Riwayat, dan Kelompok memakai komponen card yang lebih rapi.
+- Ditambahkan fitur Kelompok:
+  1. Guru dapat membuat kelompok.
+  2. Guru dapat menambah anggota kelompok.
+  3. Guru dapat menghapus anggota/kelompok.
+  4. Siswa dapat melihat Kelompok Saya.
+- Ditambahkan kategori tugas individu dan tugas kelompok.
+- Guru dapat memilih tipe tugas:
+  1. Individu
+  2. Kelompok
+- Jika tugas kelompok dipilih, guru dapat memilih target kelompok.
+- Siswa dapat melihat label tugas individu/kelompok di halaman Tugas.
+- Pengaturan UI admin diperluas:
+  1. Jenis font
+  2. Ukuran font
+  3. Warna teks
+  4. Warna judul
+  5. Warna panel
+  6. Warna utama
+  7. Warna aksen
+  8. Warna sidebar
+  9. Radius panel
+- Ditambahkan template tema:
+  1. Default Learning
+  2. One Dark Pro
+  3. Dracula Official
+  4. Tokyo Night
+  5. Nord
+  6. Night Owl
+- File baru:
+  pages/guru/kelola_kelompok.php
+  pages/siswa/kelompok.php
+  database/update_tahap_20_groups_theme.sql
+- Wajib import database:
+  database/update_tahap_20_groups_theme.sql
+
+Cara update dari Tahap 19 ke Tahap 20:
+1. Extract ZIP tahap 20.
+2. Copy semua isi folder smartlearn.
+3. Paste ke D:/xampp/htdocs/lms_rpl atau D:/xampp/htdocs/platformbelajaruntuk_smk.
+4. Pilih Replace/Overwrite jika diminta.
+5. Buka phpMyAdmin.
+6. Pilih database html_learn_rpl.
+7. Import file database/update_tahap_20_groups_theme.sql.
+8. Refresh browser dengan Ctrl + F5.
+9. Cek menu Guru: Kelola Kelompok dan Kelola Tugas.
+10. Cek menu Siswa: Kelompok Saya dan Tugas.
+11. Cek menu Admin: Pengaturan UI.
+
+
+Update Tahap 21:
+- Nama web diubah menjadi SmartLearn.
+- Tampilan UI diubah menjadi clean dan simple seperti dashboard SaaS modern.
+- Sidebar dibuat lebih minimal, terang, rapi, dan nyaman dibaca.
+- Card, tombol, form, tabel, chat, dan panel dibuat lebih soft dengan border tipis dan shadow ringan.
+- Warna default diubah menjadi:
+  Primary: #5b6ee1
+  Accent: #d8ff3e
+  Sidebar: #ffffff
+  Background: #f5f6fb
+- Pengaturan UI admin ditambah template baru:
+  SmartLearn Clean
+- Template editor lain tetap tersedia:
+  One Dark Pro
+  Dracula Official
+  Tokyo Night
+  Nord
+  Night Owl
+- File baru:
+  database/update_tahap_21_smartlearn_clean_ui.sql
+- Wajib import database:
+  database/update_tahap_21_smartlearn_clean_ui.sql
+
+Cara update dari Tahap 20 ke Tahap 21:
+1. Extract ZIP tahap 21.
+2. Copy semua isi folder smartlearn.
+3. Paste ke D:/xampp/htdocs/lms_rpl atau D:/xampp/htdocs/platformbelajaruntuk_smk.
+4. Pilih Replace/Overwrite jika diminta.
+5. Buka phpMyAdmin.
+6. Pilih database html_learn_rpl.
+7. Import file database/update_tahap_21_smartlearn_clean_ui.sql.
+8. Refresh browser dengan Ctrl + F5.
+9. Login sebagai admin dan buka Pengaturan UI.
+10. Pilih template SmartLearn Clean jika belum aktif.
+
+
+Update Tahap 22:
+- Ditambahkan fitur Absensi Siswa.
+  1. Siswa dapat klik hadir setiap hari.
+  2. Siswa dapat menulis catatan absensi.
+  3. Siswa dapat melihat riwayat absensi.
+  4. Guru dan admin dapat melihat rekap absensi berdasarkan tanggal, kelas, dan status.
+- Ditambahkan fitur Jadwal Kelas.
+  1. Guru dan admin dapat membuat jadwal pembelajaran, praktik, kuis, tugas, atau diskusi.
+  2. Jadwal dapat ditargetkan untuk semua kelas atau kelas tertentu.
+  3. Jadwal dapat dikaitkan dengan materi.
+  4. Siswa dapat melihat jadwal sesuai kelasnya.
+  5. Saat jadwal dibuat, siswa mendapat notifikasi.
+- Ditambahkan Dashboard Rekap Aktivitas Belajar.
+  1. Guru dan admin dapat melihat rekap aktivitas siswa.
+  2. Rekap berisi progress materi, nilai kuis, tugas terkumpul, live coding, absensi, dan skor game.
+  3. Rekap dapat difilter berdasarkan kelas dan nama/email siswa.
+  4. Disediakan grafik top progress materi.
+- Dashboard siswa ditambahkan ringkasan jadwal terdekat dan status absensi hari ini.
+- Dashboard guru/admin ditambahkan shortcut menuju absensi, jadwal, dan rekap aktivitas.
+- File baru:
+  includes/tahap22_bootstrap.php
+  pages/siswa/absensi.php
+  pages/siswa/jadwal.php
+  pages/guru/absensi.php
+  pages/guru/jadwal.php
+  pages/guru/rekap_aktivitas.php
+  pages/admin/absensi.php
+  pages/admin/jadwal.php
+  pages/admin/rekap_aktivitas.php
+  database/update_tahap_22_absensi_jadwal_rekap.sql
+- Wajib import database:
+  database/update_tahap_22_absensi_jadwal_rekap.sql
+
+Cara update dari Tahap 21 ke Tahap 22:
+1. Extract ZIP tahap 22.
+2. Copy semua isi folder smartlearn.
+3. Paste ke D:/xampp/htdocs/platformbelajaruntuk_smk.
+4. Pilih Replace/Overwrite jika diminta.
+5. Buka phpMyAdmin.
+6. Pilih database html_learn_rpl.
+7. Import file database/update_tahap_22_absensi_jadwal_rekap.sql.
+8. Refresh browser dengan Ctrl + F5.
+9. Login sebagai siswa, guru, dan admin untuk menguji fitur.
+
+
+Update Tahap 23:
+- Ditambahkan optimasi mobile responsive untuk Android dan iOS.
+- Sidebar berubah menjadi hamburger menu pada layar kecil.
+- Sidebar mobile bisa dibuka/tutup dan tertutup otomatis setelah menu diklik.
+- Layout dashboard, card, form, tabel, chat, tugas, absensi, jadwal, dan rekap dibuat lebih aman untuk layar HP.
+- Tabel panjang diberi horizontal scroll agar tidak merusak layout.
+- Tombol, input, select, textarea dibuat lebih touch-friendly.
+- Topbar dibuat lebih ringkas untuk layar kecil.
+- Ditambahkan dukungan PWA:
+  1. manifest.webmanifest
+  2. service-worker.js
+  3. icon aplikasi SmartLearn ukuran 72 sampai 512 px
+  4. meta tag mobile web app
+  5. dukungan Add to Home Screen di Android/iOS
+- File baru:
+  includes/pwa_head.php
+  assets/js/mobile-menu.js
+  assets/icons/icon-72.png
+  assets/icons/icon-96.png
+  assets/icons/icon-128.png
+  assets/icons/icon-144.png
+  assets/icons/icon-152.png
+  assets/icons/icon-192.png
+  assets/icons/icon-384.png
+  assets/icons/icon-512.png
+  manifest.webmanifest
+  service-worker.js
+  database/update_tahap_23_mobile_pwa.sql
+- Database:
+  Tahap 23 tidak menambahkan tabel baru. Import update_tahap_23_mobile_pwa.sql bersifat opsional.
+
+Cara update dari Tahap 22 ke Tahap 23:
+1. Extract ZIP tahap 23.
+2. Copy semua isi folder smartlearn.
+3. Paste ke D:/xampp/htdocs/platformbelajaruntuk_smk.
+4. Pilih Replace/Overwrite jika diminta.
+5. Tidak wajib import database baru.
+6. Jika ingin memastikan nama dan tema SmartLearn aktif, import database/update_tahap_23_mobile_pwa.sql.
+7. Refresh browser dengan Ctrl + F5.
+8. Uji tampilan di Inspect > Toggle Device Toolbar.
+
+
+Update Tahap 24:
+- UI SmartLearn disesuaikan dengan referensi Stitch Syntactic Intelligence yang dikirim.
+- Sidebar siswa, guru, dan admin diubah menjadi desain putih/soft dengan icon Material Symbols.
+- Dashboard siswa diganti dengan layout:
+  1. Header search dan profil
+  2. Statistik 5 card
+  3. Panel Lanjut Belajar
+  4. Panel Absensi Hari Ini
+  5. Panel Jadwal Terdekat
+  6. Panel Latihan Terakhir bergaya code editor
+  7. Panel Kelompok Saya
+- Dashboard guru diganti dengan layout:
+  1. Header search dan profil
+  2. Statistik 4 card
+  3. Aktivitas Hari Ini
+  4. Grafik perkembangan nilai
+  5. Riwayat nilai terbaru
+- Dashboard admin diganti dengan layout:
+  1. Header search dan profil
+  2. Statistik sistem
+  3. Shortcut sistem
+  4. Traffic monitor
+  5. Ringkasan sistem
+  6. Recent activity log
+- Warna utama mengikuti referensi:
+  Primary: #3525cd
+  Secondary: #00687a
+  Cyan: #57dffe
+  Background: #f8f9ff
+  Sidebar: #f2f4fc
+- Ditambahkan database/update_tahap_24_stitch_ui.sql.
+- Tidak ada tabel baru pada tahap ini.
+
+Cara update dari Tahap 23 ke Tahap 24:
+1. Extract ZIP tahap 24.
+2. Copy isi folder smartlearn.
+3. Paste ke D:/xampp/htdocs/platformbelajaruntuk_smk.
+4. Pilih Replace/Overwrite.
+5. Import database/update_tahap_24_stitch_ui.sql jika ingin memastikan tema aktif.
+6. Refresh browser dengan Ctrl + F5.
+7. Cek dashboard siswa, guru, dan admin.

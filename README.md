@@ -1,289 +1,185 @@
-Berikut adalah versi README yang sudah diperbarui. Saya telah menambahkan berbagai ikon emoji, merapikan struktur menggunakan tabel untuk bagian yang relevan (seperti akun demo), dan mengoptimalkan formatnya agar lebih profesional, modern, dan mudah dibaca di GitHub.
+Berikut adalah pembaharuan dokumen **README.md** yang telah diintegrasikan secara menyeluruh dari **Tahap 1 hingga Tahap 20**. Semua fitur baru seperti sistem tema, forum diskusi, impor soal Word, *live chat*, manajemen kelompok, hingga panel *IT Help Desk* telah disusun secara terstruktur, interaktif, dan penuh dengan ikon visual agar menarik saat dipasang di GitHub.
 
 ---
 
-# 🚀 Platform Belajar Web untuk SMK
+# 🌐 HTML Learn RPL - Web LMS Pembelajaran Web Interaktif (v20.0 ✨)
 
-**Platform Belajar untuk SMK** adalah aplikasi pembelajaran berbasis web interaktif yang dirancang khusus untuk membantu siswa SMK jurusan Rekayasa Perangkat Lunak (RPL) dalam menguasai dasar-dasar pemrograman web, berfokus pada materi **HTML, CSS, dan JavaScript**.
+**HTML Learn RPL** adalah platform *Learning Management System* (LMS) berbasis web interaktif yang dikembangkan secara khusus untuk siswa SMK jurusan Rekayasa Perangkat Lunak (RPL). Aplikasi ini memfasilitasi pembelajaran teknologi web dasar—**HTML5, CSS3, dan JavaScript**—dalam satu ekosistem yang seru, modern, dan penuh fitur kelas atas.
 
-Aplikasi ini tidak hanya sekadar e-learning biasa, tetapi dilengkapi dengan fitur *live coding*, *game edukasi*, hingga manajemen kelas yang lengkap untuk guru dan admin! 🌟
-
----
-
-## 🎨 Tampilan dan Konsep
-
-Platform ini mengusung konsep **UI/UX yang modern, playful, dan interaktif** untuk menjaga semangat belajar siswa. Menggunakan skema warna yang identik dengan dunia teknologi: kombinasi **Biru**, **Ungu**, **Hijau Neon**, yang dibalut dengan tema **Dark Panel**.
+Aplikasi ini mengusung konsep visual **Playful Modern UI** dengan kombinasi warna *neon lime*, *electric blue*, *dark panel*, *rounded card*, serta *decorative blob* yang dinamis, didukung oleh mesin kustomisasi tema yang sangat fleksibel.
 
 ---
 
-## ✨ Fitur Utama
+## 🚀 Fitur Utama Berdasarkan Peran
 
-### 🎓 Fitur Siswa
+### 🧑‍🎓 Fitur Siswa
 
-* 🔐 Login ke portal siswa.
-* 📊 Melihat *dashboard progress* belajar secara *real-time*.
-* 📚 Membaca materi interaktif (HTML, CSS, JavaScript).
-* 💻 Mencoba kode langsung melalui fitur **Live Coding**.
-* 💾 Menyimpan hasil latihan coding.
-* 📝 Mengerjakan kuis evaluasi.
-* 📈 Memantau riwayat nilai dan latihan.
-* 🎮 Bermain **Game Edukasi: Coding Quest**.
-* 🎓 Mencetak **Sertifikat** setelah menyelesaikan semua pembelajaran.
+* 📊 **Dashboard Pintar:** Menampilkan kemajuan belajar, statistik latihan, rekomendasi materi berikutnya secara otomatis, serta skor game terbaik.
+* 📚 **Materi Web Interaktif:** Modul HTML, CSS, dan JavaScript lengkap dengan pencarian materi, navigasi *next/prev*, dan status nilai terbaik.
+* 💻 **Super Live Coding:** Editor kode terintegrasi untuk mengeksekusi HTML, CSS, dan JS sekaligus dengan fitur simpan hasil latihan.
+* 📝 **Kuis & Penyelarasan Otomatis:** Kuis interaktif dengan umpan balik jawaban benar setelah selesai. Skor $\ge 75$ otomatis menandai materi selesai.
+* 🏆 **Sistem Peringkat (Ranking):** Papan klaster nilai dan keaktifan siswa se-kelas.
+* 👥 **Kelompok Saya:** Melihat daftar kelompok belajar yang dibentuk oleh guru.
+* 📤 **Manajemen Tugas:** Mengunggah tugas individu maupun kelompok dengan pelacakan status nilai/umpan balik dari guru.
+* 💬 **Forum Diskusi & Live Chat:** Wadah interaktif untuk berdiskusi per materi dan fitur pesan bantuan terenkapsulasi *bubble chat*.
+* 🎮 **Coding Quest Game:** Game edukasi 4 mode (HTML, CSS, JS, Campuran) dengan sistem nyawa (*lives*), level, dan riwayat skor.
+* 🎓 **E-Sertifikat:** Sertifikat digital otomatis terbuka dan dapat dicetak jika seluruh modul selesai dengan rata-rata nilai kuis minimal 75.
 
 ### 👨‍🏫 Fitur Guru
 
-* 🔐 Login ke portal guru.
-* 📖 Mengelola materi pembelajaran (Tambah/Edit/Hapus).
-* 📋 Mengelola bank soal kuis.
-* 📊 Memantau laporan nilai seluruh siswa.
-* review Mengecek langsung hasil *live coding* siswa.
-* 🏆 Melihat laporan skor *Game Coding Quest*.
-* ⚙️ Mengatur soal dan konfigurasi *game*.
-* 🖨️ Mencetak instrumen penilaian produk untuk keperluan akademik.
+* 📖 **Kelola Pembelajaran:** Manajemen penuh (Tambah/Edit/Hapus) untuk materi web dan bank soal kuis.
+* 📥 **Word Quiz Importer:** Fitur unggah dokumen `.docx` untuk impor soal pilihan ganda otomatis dilengkapi sistem *parsing preview* cerdas.
+* 📂 **Kelola Tugas & Kelompok:** Membuat tugas (Individu/Kelompok), membentuk kelompok belajar, dan mengelompokkan tugas siswa berdasarkan status filter.
+* 📝 **Evaluasi Fleksibel:** Memantau kode *live coding* siswa, riwayat skor game, grafik progress nilai, dan memberikan umpan balik tugas.
+* 🖨️ **Instrumen Penilaian:** Fitur cetak instrumen penilaian produk berbasis skala Likert (1-5).
 
-### 🛠️ Fitur Admin
+### 🛠️ Fitur Admin (IT Help Desk & Super UI)
 
-* 🔐 Login ke portal admin.
-* 👥 Mengelola keseluruhan data pengguna.
-* ➕ Menambah akun untuk Siswa, Guru, dan Admin.
-* ✏️ Mengedit atau 🗑️ menghapus data pengguna.
-* 📈 Memantau ringkasan data sistem di *dashboard*.
+* 👥 **Manajemen Pengguna Terpusat:** Kontrol penuh akun siswa, guru, dan admin dari satu halaman eksekutif.
+* 🔑 **IT Help Desk Panel:** Pencarian akun instan, fitur *reset password* kilat, dan tombol *generate* password sementara.
+* 👁️ **Password Viewer:** Fitur intip kata sandi lewat ikon mata (*show/hide* `password_plain`) untuk membantu pengguna yang lupa sandi.
+* 🎨 **Theme Engine Customizer:** Pengaturan nama aplikasi, logo, jenis/ukuran font, radius panel, hingga kustomisasi palet warna UI global.
 
 ---
 
-## 💻 Teknologi yang Digunakan
+## 🎨 Pilihan Tema Dashboard (Engine Build v20)
 
-Aplikasi ini dibangun menggunakan *tech stack* dasar web yang solid:
+Admin dapat mengubah total estetika visual seluruh pengguna ke dalam beberapa *template* populer:
 
-* 🐘 **PHP Native**
-* 🐬 **MySQL**
-* 🌐 **HTML5**
-* 🎨 **CSS3**
-* ⚡ **JavaScript**
-* ⚙️ **XAMPP** & **phpMyAdmin**
+* 🌟 **Default Learning** (Playful Neon Cyan/Lime)
+* 🦅 **One Dark Pro** (Professional Developer Style)
+* 🧛 **Dracula Official** (High-Contrast Vampire Palette)
+* 🌌 **Tokyo Night** (Neon Cyberpunk Vibe)
+* ❄️ **Nord** (Clean Arctic Elegant Blue)
+* 🦉 **Night Owl** (Sleek Deep Blue Accent)
 
 ---
 
-## 📂 Struktur Folder
+## 💻 Spesifikasi Teknologi
+
+* **Bahasa Pemrograman:** PHP Native (Struktur Prosedural untuk Pembelajaran) & JavaScript (ES6+)
+* **Database:** MySQL / MariaDB
+* **Desain UI:** CSS3 Custom Variables (Sistem Tema Dinamis) & Animasi Gooey
+* **Library Eksternal:** `ZipArchive` PHP Extension (Wajib aktif untuk Fitur Impor Word)
+* **Lingkungan Lokal:** XAMPP v3.3+ (Apache & MySQL)
+
+---
+
+## 📂 Peta Direktori Utama
 
 ```text
-platformbelajaruntuk_smk/
+html-learn-rpl/
 │
 ├── assets/
 │   ├── css/
-│   │   └── style.css
+│   │   └── style.css            # Desain inti & komponen gooey toast
 │   └── js/
-│       └── main.js
+│       ├── main.js
+│       ├── gooey-toast.js      # Animasi pop-up notifikasi
+│       ├── theme-toggle.js     # Pengatur mode gelap/terang & tema
+│       └── password-toggle.js  # Utilitas show/hide password
 │
 ├── config/
 │   └── koneksi.php
 │
-├── database/
+├── database/                   # Berkas skema SQL & migrasi bertahap
 │   ├── html_learn_rpl.sql
 │   ├── update_tahap_3.sql
 │   ├── update_tahap_6_css_js.sql
 │   ├── update_tahap_8_game.sql
-│   └── update_tahap_9_kelola_game.sql
+│   ├── update_tahap_9_kelola_game.sql
+│   ├── update_tahap_13_super_features.sql
+│   ├── update_tahap_15_admin_helpdesk.sql
+│   ├── update_tahap_16_ui_helpdesk_chat.sql
+│   ├── update_tahap_18_password_ui_fix.sql
+│   └── update_tahap_20_groups_theme.sql
 │
 ├── includes/
 │   ├── auth.php
 │   ├── header.php
-│   └── footer.php
+│   ├── footer.php
+│   └── ui_settings.php         # Engine penyimpan preferensi gaya dari Admin
 │
 ├── pages/
-│   ├── siswa/
-│   ├── guru/
-│   └── admin/
+│   ├── siswa/                  # (Materi, Live Coding, Kuis, Game, Tugas, Forum, Ranking, Kelompok)
+│   ├── guru/                   # (Kelola Materi, Kuis, Kelompok, Tugas, Impor Word, Instrumen)
+│   └── admin/                  # (Kelola Pengguna/Helpdesk, Pesan, UI Settings, Logs)
 │
-├── index.php
-├── login.php
-├── logout.php
-└── README.md
+├── uploads/
+│   └── tugas/                  # Tempat penyimpanan berkas unggahan siswa
+└── index.php
 
 ```
 
 ---
 
-## ⚙️ Cara Instalasi di Localhost
+## ⚙️ Panduan Instalasi Pertama Kali (Fresh Install)
 
-### 1. Siapkan XAMPP
+1. **Siapkan EnvXAMPP:** Pastikan Apache dan MySQL menyala. Pastikan ekstensi `ZipArchive` di `php.ini` Anda telah aktif.
+2. **Ekstrak Berkas:** Tempatkan folder hasil ekstrak ke direktori target:
+> `C:/xampp/htdocs/html-learn-rpl`  *(atau nama folder `lms_rpl`)*
 
-Pastikan aplikasi **XAMPP** sudah terinstal. Aktifkan *service* berikut pada XAMPP Control Panel:
 
-* ✅ **Apache**
-* ✅ **MySQL**
+3. **Konfigurasi Database:**
+* Masuk ke `http://localhost/phpmyadmin/`
+* Buat basis data bernama `html_learn_rpl`
+* Impor berkas dasar: `database/html_learn_rpl.sql`
 
-### 2. Pindahkan Project ke `htdocs`
 
-Copy folder project ke dalam direktori `htdocs` XAMPP Anda:
-
-> `D:\xampp\htdocs\platformbelajaruntuk_smk`
-
-*(Catatan: Jika folder Anda bernama `lms_rpl`, URL localhost nantinya akan menyesuaikan nama folder tersebut).*
-
-### 3. Konfigurasi Database (phpMyAdmin)
-
-1. Buka browser dan akses: `http://localhost/phpmyadmin`
-2. Buat database baru dengan nama: `html_learn_rpl`
-3. Import file database utama: `database/html_learn_rpl.sql`
-
-### 4. Import Database Update (Penting!)
-
-Agar fitur terbaru (Live coding, CSS/JS, Game) berfungsi, import file update berikut secara berurutan:
-
-1. `database/update_tahap_3.sql`
-2. `database/update_tahap_6_css_js.sql`
-3. `database/update_tahap_8_game.sql`
-4. `database/update_tahap_9_kelola_game.sql`
-
-### 5. Atur Koneksi Database
-
-Buka file `config/koneksi.php` dan pastikan kodenya seperti ini:
-
-```php
-<?php
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db   = "html_learn_rpl";
-
-$koneksi = mysqli_connect($host, $user, $pass, $db);
-
-if (!$koneksi) {
-    die("Koneksi database gagal: " . mysqli_connect_error());
-}
-?>
-
-```
-
-### 6. Jalankan Aplikasi 🚀
-
-Buka browser dan ketikkan:
-
-> `http://localhost/platformbelajaruntuk_smk/`
+4. **Jalankan Aplikasi:** Akses tautan URL melalui peramban: `http://localhost/html-learn-rpl/`
 
 ---
 
-## 🔑 Akun Demo
+## 🔄 Prosedur Pembaruan (Kumulatif Tahap 2 s.d 20)
 
-Gunakan kredensial di bawah ini untuk mencoba sistem langsung:
+Jika Anda melakukan pembaruan secara bertahap dari repositori ZIP, ikuti langkah-langkah standarisasi struktur berikut:
 
-| Peran | Email | Password |
+1. Ekstrak ZIP pembaruan tahap terbaru Anda.
+2. Salin dan tempel (*overwrite/replace*) seluruh isi berkas ke dalam target folder instalasi htdocs Anda (`html-learn-rpl` atau `lms_rpl`).
+3. **Eksekusi SQL Berurutan (Penting):** Jika pembaruan menyertakan berkas basis data baru, masuk ke phpMyAdmin, pilih database `html_learn_rpl` dan lakukan impor berkas SQL berikut secara berkini:
+* 🛑 *Tahap 3:* `database/update_tahap_3.sql`
+* 🛑 *Tahap 6:* `database/update_tahap_6_css_js.sql`
+* 🛑 *Tahap 8:* `database/update_tahap_8_game.sql`
+* 🛑 *Tahap 9:* `database/update_tahap_9_kelola_game.sql`
+* 🛑 *Tahap 13:* `database/update_tahap_13_super_features.sql`
+* 🛑 *Tahap 15:* `database/update_tahap_15_admin_helpdesk.sql`
+* 🛑 *Tahap 16:* `database/update_tahap_16_ui_helpdesk_chat.sql`
+* 🛑 *Tahap 18/19:* `database/update_tahap_18_password_ui_fix.sql`
+* 🛑 *Tahap 20:* `database/update_tahap_20_groups_theme.sql`
+
+
+4. Lakukan pembersihan cache peramban dengan menekan kombinasi tombol **Ctrl + F5** agar CSS gaya gooey, penataan sidebar baru, dan script tema terbaca sempurna.
+
+---
+
+## 🔑 Kredensial Akun Pengujian (Demo)
+
+| Peran Pengguna | Email Login | Kata Sandi |
 | --- | --- | --- |
-| 🎓 **Siswa** | `siswa@demo.com` | `123456` |
+| 🧑‍🎓 **Siswa** | `siswa@demo.com` | `123456` |
 | 👨‍🏫 **Guru** | `guru@demo.com` | `123456` |
 | 🛠️ **Admin** | `admin@demo.com` | `123456` |
 
 ---
 
-## 📖 Panduan Penggunaan
+## 🔒 Catatan Keamanan Aplikasi
 
-### 🧑‍🎓 Sebagai Siswa
-
-1. **Login** menggunakan akun siswa.
-2. Buka menu **Materi Web** di *dashboard*.
-3. Pelajari materi HTML, CSS, atau JavaScript.
-4. Klik **Live Coding** untuk mempraktikkan materi dan simpan kode Anda.
-5. Kerjakan **Kuis** untuk menguji pemahaman.
-6. Mainkan **Game Coding** untuk *review* materi yang asik.
-7. Pantau perkembangan di **Riwayat Belajar**.
-8. **Cetak Sertifikat** jika syarat nilai dan materi sudah terpenuhi! 🎓
-
-### 👨‍🏫 Sebagai Guru
-
-1. **Login** menggunakan akun guru.
-2. **Kelola Materi**: Tambah, edit, atau hapus modul pembelajaran.
-3. **Kelola Kuis**: Atur soal-soal evaluasi.
-4. **Latihan Siswa**: Pantau hasil *live coding* yang disubmit siswa.
-5. **Kelola & Laporan Game**: Atur konfigurasi *game* (soal, nyawa, skor) dan lihat skor tertinggi siswa.
-6. **Laporan Nilai**: Rekapitulasi nilai dan *progress* kelas.
-7. **Instrumen**: Cetak format penilaian produk.
-
-### 🛠️ Sebagai Admin
-
-1. **Login** menggunakan akun admin.
-2. Buka menu **Kelola Pengguna**.
-3. Tambah, edit, atau hapus data akun Siswa, Guru, maupun Admin lainnya.
-4. Sesuaikan profil admin melalui pengaturan akun.
+> [!WARNING]
+> Berkas bawaan pada proyek latihan lokal/skripsi ini menggunakan enkripsi **MD5** dan menyediakan visualisasi kolom `password_plain` pada tabel pengguna guna mendukung fungsionalitas panel darurat *IT Help Desk*.
+> Jika platform ini akan diunggah atau diimplementasikan pada lingkungan **Produksi/Hosting Publik**, sangat direkomendasikan untuk mengubah mekanisme penyimpanan kata sandi menggunakan fungsi bawaan PHP standar industri: `password_hash()` dan `password_verify()`.
 
 ---
 
-## 🎮 Fitur Khusus: Game Coding Quest
+## 📤 Push Proyek ke GitHub
 
-**Coding Quest** adalah mini-game edukasi bawaan untuk membantu siswa me-*review* materi dengan cara yang adiktif dan menyenangkan!
-
-**Mode yang Tersedia:**
-
-* HTML
-* CSS
-* JavaScript
-* Campuran (Mix)
-
-**Kontrol Guru atas Game:**
-Guru dapat mengkustomisasi pengalaman bermain siswa dengan mengatur *Jumlah soal*, *Nyawa (lives)*, *Poin per jawaban benar*, *Soal & Pembahasan*, hingga mengaktifkan/menonaktifkan soal tertentu.
-
----
-
-## ⚠️ Catatan Deployment (Hosting)
-
-Aplikasi ini **tidak bisa** di-hosting menggunakan layanan statis seperti *GitHub Pages* karena membutuhkan server PHP dan MySQL. Untuk membuatnya *online*, gunakan layanan hosting seperti:
-
-* ☁️ InfinityFree (Gratis)
-* ☁️ Hostinger
-* ☁️ Niagahoster
-* ☁️ Rumahweb
-* ☁️ VPS (DigitalOcean, AWS, dll)
-
----
-
-## 🐙 Cara Upload ke GitHub
-
-Buka terminal di dalam folder project (misal melalui VS Code) dan jalankan:
+Gunakan rentetan perintah *command-line* berikut untuk mengunggah pembaruan arsitektur aplikasi ini ke repositori Anda sendiri:
 
 ```bash
 git init
 git add .
-git commit -m "🚀 Initial commit: Platform Belajar SMK"
+git commit -m "🚀 Upgrade Major v20: Implementasi Sistem Tema, Manajemen Grup, dan IT Help Desk"
 git branch -M main
-git remote add origin https://github.com/USERNAME/platformbelajaruntuk_smk.git
+git remote add origin https://github.com/USERNAME_ANDA/html-learn-rpl.git
 git push -u origin main
 
 ```
-
-*(Jangan lupa ganti `USERNAME` dengan username GitHub Anda).*
-
-**Jika ingin mengganti URL *remote* yang sudah ada:**
-
-```bash
-git remote set-url origin https://github.com/USERNAME/platformbelajaruntuk_smk.git
-git push -u origin main
-
-```
-
----
-
-## 🌱 Status Pengembangan (To-Do List)
-
-Project ini masih sangat terbuka untuk dikembangkan. Ide fitur mendatang:
-
-* [ ] 📄 Export laporan kelas ke PDF/Excel.
-* [ ] 🔔 Sistem notifikasi siswa.
-* [ ] 💬 Forum diskusi antar siswa & guru.
-* [ ] 📤 Fitur upload tugas (file).
-* [ ] 🆙 Level *game* yang lebih kompleks.
-* [ ] 🏆 *Leaderboard* / Sistem ranking kelas.
-* [ ] 📱 Optimalisasi antarmuka Mobile (Responsif 100%).
-
----
-
-## 🧑‍💻 Informasi Pengembang
-
-Project ini didedikasikan sebagai media pembelajaran interaktif berbasis web.
-
-* **Nama Project**: Platform Belajar untuk SMK
-* **Kategori**: LMS (*Learning Management System*) / Multimedia Interaktif
-* **Fokus Materi**: Pemrograman Web Dasar (HTML, CSS, JS)
-
-## 📜 Lisensi
-
-Aplikasi ini bersifat *Open-Source* untuk keperluan edukasi, pembelajaran, dan modifikasi pengembangan media pendidikan. Selamat berkarya! 🎉

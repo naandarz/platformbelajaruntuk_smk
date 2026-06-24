@@ -656,3 +656,46 @@ Cara update dari Tahap 22 ke Tahap 23:
 6. Jika ingin memastikan nama dan tema SmartLearn aktif, import database/update_tahap_23_mobile_pwa.sql.
 7. Refresh browser dengan Ctrl + F5.
 8. Uji tampilan di Inspect > Toggle Device Toolbar.
+
+
+Update Tahap 24:
+- UI SmartLearn disesuaikan dengan referensi Stitch Syntactic Intelligence yang dikirim.
+- Sidebar siswa, guru, dan admin diubah menjadi desain putih/soft dengan icon Material Symbols.
+- Dashboard siswa diganti dengan layout:
+  1. Header search dan profil
+  2. Statistik 5 card
+  3. Panel Lanjut Belajar
+  4. Panel Absensi Hari Ini
+  5. Panel Jadwal Terdekat
+  6. Panel Latihan Terakhir bergaya code editor
+  7. Panel Kelompok Saya
+- Dashboard guru diganti dengan layout:
+  1. Header search dan profil
+  2. Statistik 4 card
+  3. Aktivitas Hari Ini
+  4. Grafik perkembangan nilai
+  5. Riwayat nilai terbaru
+- Dashboard admin diganti dengan layout:
+  1. Header search dan profil
+  2. Statistik sistem
+  3. Shortcut sistem
+  4. Traffic monitor
+  5. Ringkasan sistem
+  6. Recent activity log
+- Warna utama mengikuti referensi:
+  Primary: #3525cd
+  Secondary: #00687a
+  Cyan: #57dffe
+  Background: #f8f9ff
+  Sidebar: #f2f4fc
+- Ditambahkan database/update_tahap_24_stitch_ui.sql.
+- Tidak ada tabel baru pada tahap ini.
+
+Cara update dari Tahap 23 ke Tahap 24:
+1. Extract ZIP tahap 24.
+2. Copy isi folder smartlearn.
+3. Paste ke D:/xampp/htdocs/platformbelajaruntuk_smk.
+4. Pilih Replace/Overwrite.
+5. Import database/update_tahap_24_stitch_ui.sql jika ingin memastikan tema aktif.
+6. Refresh browser dengan Ctrl + F5.
+7. Cek dashboard siswa, guru, dan admin.

@@ -16,7 +16,8 @@ Ikuti langkah-langkah berikut untuk menjalankan aplikasi di lingkungan lokal And
 3. Buka browser dan akses **phpMyAdmin** (`http://localhost/phpmyadmin`).
 4. Buat database baru bernama `html_learn_rpl` dan **Import** file `database/html_learn_rpl.sql`.
 5. Buka aplikasi melalui browser:
-* URL: `http://localhost/smartlearn/` atau degan `http://localhost/platformbelajaruntuk_smk/`
+* URL: `http://localhost/smartlearn/` atau dengan `http://localhost/platformbelajaruntuk_smk/`
+* Jika run dari terminal vs code `D:\xampp\php\php.exe -S localhost:8000`
 * Atau: `http://localhost/platformbelajaruntuk_smk/login.php` (sesuaikan dengan nama folder Anda)
 
 
